@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Digunakan sebagai guideline untuk memisahkan layout menjadi dua bagian (50%) -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+
+            <fragment
+                android:id="@+id/fragmentTop"
+                android:name="com.educa62.day1.TopFragment"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/container1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Membuat TopFragment secara statis -->
+
+    <!-- Container untuk membuat BottomFragment secara dinamis -->
+</RelativeLayout>
